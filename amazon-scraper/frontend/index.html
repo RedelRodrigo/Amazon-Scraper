@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Product Scraper</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <i class="fab fa-amazon"></i>
+                <h1>Amazon Product Scraper</h1>
+                <p>Extrae información de productos de Amazon de forma rápida y sencilla</p>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <h2>Buscar Productos</h2>
+                <div class="search-form">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="keywordInput" 
+                            placeholder="Ingresa una palabra clave (ej: auriculares bluetooth)"
+                            autocomplete="off"
+                        >
+                        <button id="searchBtn" class="search-btn">
+                            <i class="fas fa-search"></i>
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading Section -->
+        <section id="loadingSection" class="loading-section hidden">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <p>Extrayendo productos de Amazon...</p>
+                <small>Esto puede tomar unos segundos</small>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="resultsSection" class="results-section hidden">
+            <div class="results-header">
+                <h3 id="resultsTitle">Resultados de búsqueda</h3>
+                <span id="productCount" class="product-count"></span>
+            </div>
+            <div id="productsContainer" class="products-grid">
+                <!-- Los productos se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+
+        <!-- Error Section -->
+        <section id="errorSection" class="error-section hidden">
+            <div class="error-content">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Error al extraer productos</h3>
+                <p id="errorMessage">Ha ocurrido un error inesperado</p>
+                <button id="retryBtn" class="retry-btn">
+                    <i class="fas fa-redo"></i>
+                    Reintentar
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Amazon Product Scraper. Hecho con ❤️ para aprendizaje.</p>
+            <small>Este proyecto es solo para fines educativos.</small>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
