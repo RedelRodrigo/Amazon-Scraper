@@ -1,0 +1,2 @@
+- Run "bun run dev" inside the "Backend" folder
+- Run "npm run dev" inside the "Frontend" folder
